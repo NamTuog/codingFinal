@@ -8,7 +8,7 @@ class Dave():
         self.size = (12,12)
         self.health = 1
         self.speed = 1
-        self.img = pygame.iamge.load('IDLE1.png')
+        self.img = pygame.image.load('IDLE1.png')
         self.img = pygame.transform.scale(self.img,self.size)
         self.rect = self.img.get_rect()
         # Directions (only = True when the key is pressed)
@@ -24,6 +24,8 @@ class Dave():
         self.jump_speed = 25
 
     def move(self):    #including jump
+        ground = 0 #TEMPORARY
+
         self.movement_x = 0
         self.movement_y = 0
 
@@ -78,6 +80,7 @@ class Dave():
         self.rect = pygame.Rect(int(self.x), int(self.y), 32, 32)
 
     def fall(self):
+        ground = 0 #TEMPORARY
         if not self.rect.colliderect(ground):  # If the player is not on the ground (on the sky)
             self.movement_y += 2.5  # Falls down to the ground with the speed of 3.
         else:
@@ -94,6 +97,10 @@ class Dave():
             #Restart game
 
 class Robot():
+    def __init__(self):
+        self.size = #
 
 
 class Alien():
+    def __init__(self):
+        self.size = #
