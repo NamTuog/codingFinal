@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc23b059-cf87-46fd-875b-5ede30f0331f" name="Changes" comment="Removed empty files">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="cc23b059-cf87-46fd-875b-5ede30f0331f" name="Changes" comment="Init Dave Class">
       <change beforePath="$PROJECT_DIR$/Classes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classes.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -137,7 +136,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684159107682</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Init Dave Class">
+      <created>1684159875891</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1684159875891</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -169,6 +175,7 @@
     <MESSAGE value="TEST1" />
     <MESSAGE value="Added &quot;Class.py&quot; file" />
     <MESSAGE value="Removed empty files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed empty files" />
+    <MESSAGE value="Init Dave Class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Init Dave Class" />
   </component>
 </project>
