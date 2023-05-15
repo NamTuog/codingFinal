@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cc23b059-cf87-46fd-875b-5ede30f0331f" name="Changes" comment="Removed empty files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Classes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classes.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684158924210</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Removed empty files">
+      <created>1684159107682</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1684159107682</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
