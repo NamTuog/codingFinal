@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc23b059-cf87-46fd-875b-5ede30f0331f" name="Changes" comment="Init Dave Class">
-      <change beforePath="$PROJECT_DIR$/Classes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classes.py" afterDir="false" />
-    </list>
+    <list default="true" id="cc23b059-cf87-46fd-875b-5ede30f0331f" name="Changes" comment="Add Movement and Gravity to Dave Class" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -143,7 +141,28 @@
       <option name="project" value="LOCAL" />
       <updated>1684159875891</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Init Dave Class">
+      <created>1684160218764</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1684160218764</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Add Movement and Gravity to Dave Class">
+      <created>1684160316559</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1684160316559</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Add Movement and Gravity to Dave Class">
+      <created>1684160704842</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1684160704842</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -175,7 +194,8 @@
     <MESSAGE value="TEST1" />
     <MESSAGE value="Added &quot;Class.py&quot; file" />
     <MESSAGE value="Removed empty files" />
-    <MESSAGE value="Init Dave Class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Init Dave Class" />
+    <MESSAGE value="Add Movement and Gravity Dave Class" />
+    <MESSAGE value="Add Movement and Gravity to Dave Class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Movement and Gravity to Dave Class" />
   </component>
 </project>
