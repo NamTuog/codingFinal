@@ -4,7 +4,7 @@ from pygame.locals import QUIT
 #The menu
 class menu:
   def __init__(self):
-    self.image=pygame.image.load("Menu.png")
+    self.image= pygame.image.load("Menu.png")
     self.rect = self.image.get_rect()
 
 pygame.init()
