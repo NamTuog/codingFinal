@@ -89,27 +89,9 @@ class Dave():
 
         self.rect = pygame.Rect(int(self.x), int(self.y), 32, 32)
 
-def die(self):
-        game = 0
-        while game == 0:
-            for event in pygame.event.get():
-                if event.type == pygame.QUIT: sys.exit()
-            gameover = create_bigfont("GAMEOVER")
-            gameover_rect = gameover.get_rect(center=(width / 2, height / 2 - 25))
-            screen.blit(gameover, gameover_rect)
-            replay = create_font("Press 'r' to Replay")
-            replay_rect = replay.get_rect(center=(width / 2, height / 2))
-            screen.blit(replay, replay_rect)
-            exit = create_font("Press 'x' to Exit")
-            exit_rect = exit.get_rect(center=(width / 2, height / 2 + 20))
-            screen.blit(exit, exit_rect)
-            clock.tick(30)
-            keys = pygame.key.get_pressed()
-            if keys[pygame.K_r]:
-                os.execl(sys.executable, sys.executable, *sys.argv)
-            if keys[pygame.K_x]:
-                quit()
-            pygame.display.flip()
+    def die(self):
+            game = 0
+            #Restart game
 
 class Robot():
 
