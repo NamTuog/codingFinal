@@ -1,16 +1,22 @@
-# This is a sample Python script.
+import pygame, sys
+from pygame.locals import QUIT
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+#The menu
+class menu:
+  def __init__(self):
+    self.image=pygame.image.load("Menu.png")
+    self.rect = self.image.get_rect()
 
+pygame.init()
+DISPLAYSURF = pygame.display.set_mode((400, 300))
+pygame.display.set_caption('Hello World!')
+while True:
+    for event in pygame.event.get():
+        if event.type == QUIT:
+            pygame.quit()
+            sys.exit()
+    pygame.display.update()
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    #Starts the menu screen
+    display=menu()
+    DISPLAYSURF.blit(display.image, display.rect)
