@@ -111,7 +111,7 @@ class Dave():
     def pickup(self):
         for item in items:
             if pygame.Rect.colliderect(self.rect, item.rect):
-
+                item.
 
     def die(self):
             game = 0
