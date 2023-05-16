@@ -1,6 +1,6 @@
 import pygame
 
-from main import DISPLAYSURF
+
 
 
 class menu:
@@ -9,6 +9,5 @@ class menu:
         self.rect = self.image.get_rect()
 
 
-def menuRun():
-    display = menu()
-    DISPLAYSURF.blit(display.image, display.rect)
+display = menu()
+
