@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc23b059-cf87-46fd-875b-5ede30f0331f" name="Changes" comment="Add Movement and Gravity to Dave Class">
-      <change beforePath="$PROJECT_DIR$/Classes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classes.py" afterDir="false" />
-    </list>
+    <list default="true" id="cc23b059-cf87-46fd-875b-5ede30f0331f" name="Changes" comment="Add Movement and Gravity to Dave Class" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
