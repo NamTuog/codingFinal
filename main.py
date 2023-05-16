@@ -1,4 +1,4 @@
-import pygame, sys
+import pygame, sys, StartScreen
 from pygame.locals import QUIT
 
 
