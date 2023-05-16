@@ -108,6 +108,11 @@ class Dave():
 
         self.rect = pygame.Rect(int(self.x), int(self.y), 32, 32)
 
+    def pickup(self):
+        for item in items:
+            if pygame.Rect.colliderect(self.rect, item.rect):
+                item.
+
     def die(self):
             game = 0
             #Restart game
@@ -119,6 +124,7 @@ class Robot():
         self.img = pygame.image.load('ROBOT.png')
         self.img = pygame.transform.scale(self.img, self.size)
         self.rect = self.img.get_rect()
+    def wander(self):
 
 
 class Alien():
@@ -128,3 +134,5 @@ class Alien():
         self.img = pygame.image.load('WALK2.png')
         self.img = pygame.transform.scale(self.img, self.size)
         self.rect = self.img.get_rect()
+
+    def wander(self):
