@@ -8,9 +8,14 @@ class Dave():
         self.size = (12,12)
         self.health = 1
         self.speed = 1
-        self.img = pygame.image.load('IDLE1.png')
+        self.default_img = pygame.image.load('IDLE1.png')
+        self.img = self.defaultimg
+        self.image_frame = 1
+        self.img_time = 0
+        self.img_change = False
         self.img = pygame.transform.scale(self.img,self.size)
         self.rect = self.img.get_rect()
+
         # Directions (only = True when the key is pressed)
         self.left = False
         self.right = False
@@ -30,10 +35,12 @@ class Dave():
         # Left
         if self.left and self.x > -1:  # and not self.right
             self.movement_x = - self.speed
+            self.img_change = True
 
-            # Right
+        # Right
         elif self.right and self.x <= 1570:
             self.movement_x = self.speed
+            self.img_change = True
 
             # Down
         elif self.down and self.y >= 0:
@@ -74,6 +81,18 @@ class Dave():
         # Updating to the final location (x and y)
         self.x += self.movement_x
         self.y += self.movement_y
+
+
+        # Image Changing
+        if self.img_change :
+            if self.image_frame % 10 == 0 :
+                if self.img == self.default.img :
+                    self.img = pygame.image.load('RUN1.png')
+                else :
+                    self.img = self.default_img
+                    self.img_change = False
+                self.image_frame += 1
+
 
         self.rect = pygame.Rect(int(self.x), int(self.y), 32, 32)
 
