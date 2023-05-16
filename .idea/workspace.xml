@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc23b059-cf87-46fd-875b-5ede30f0331f" name="Changes" comment="Add Movement and Gravity to Dave Class" />
+    <list default="true" id="cc23b059-cf87-46fd-875b-5ede30f0331f" name="Changes" comment="Add Movement and Gravity to Dave Class">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Classes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classes.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -202,7 +205,8 @@
     <MESSAGE value="Added &quot;Class.py&quot; file" />
     <MESSAGE value="Removed empty files" />
     <MESSAGE value="Add Movement and Gravity Dave Class" />
-    <MESSAGE value="Add Movement and Gravity to Dave Class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Movement and Gravity to Dave Class" />
+    <MESSAGE value="Create Item File and Level 1 File" />
+    <MESSAGE value="Don't know" />
+    <option name="LAST_COMMIT_MESSAGE" value="Don't know" />
   </component>
 </project>
