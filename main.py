@@ -10,5 +10,8 @@ while True:
         if event.type == QUIT:
             pygame.quit()
             sys.exit()
-    SCREEN.blit(StartScreen.display.image, StartScreen.display.rect)
+    #Displays the background photo for the Menu
+    SCREEN.blit(StartScreen.showthis.image, StartScreen.showthis.rect)
+    #Displays the first button for the menu
+    StartScreen.showthis.button1(SCREEN)
     pygame.display.update()
