@@ -1,4 +1,5 @@
-import pygame, time
+import pygame
+import Time
 import Items
 
 class Dave():
@@ -125,18 +126,18 @@ class Dave():
         self.rect = pygame.Rect(int(self.x), int(self.y), 32, 32)
 
     def pickup(self):
-        for item in items:
-            if pygame.Rect.colliderect(self.rect, SpeedUp.rect):
+        for item in Items.items:
+            if pygame.Rect.colliderect(self.rect, Items.SpeedUp.rect):
                 speedBoost = True
-                SpeedUp.collectSpeed()
+                Items.SpeedUp.collectSpeed()
                 self.health += 1
-            if pygame.Rect.colliderect(self.rect, JumpUp.rect):
+            if pygame.Rect.colliderect(self.rect, Items.JumpUp.rect):
                 jumpBoost = True
-                JumpUp.collectJump()
+                Items.JumpUp.collectJump()
                 self.health += 1
-            if pygame.Rect.colliderect(self.rect, Subway.rect):
+            if pygame.Rect.colliderect(self.rect, Items.Subway.rect):
                 subBoost = True
-                SpeedUp.collectSub()
+                Items.SpeedUp.collectSub()
                 self.health += 1
                 while self.health > 1:
                     while speedBoost == True:
