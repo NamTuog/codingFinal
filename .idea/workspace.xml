@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ae6d51bf-977a-4209-8fe5-130dc55df491" name="Changes" comment="Finally got stuff working">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StartScreen.py" beforeDir="false" afterPath="$PROJECT_DIR$/StartScreen.py" afterDir="false" />
+    <list default="true" id="ae6d51bf-977a-4209-8fe5-130dc55df491" name="Changes" comment="Kinda have a start button.">
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -220,7 +218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684331219643</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Kinda have a start button.">
+      <created>1684333975456</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1684333975456</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -256,6 +261,7 @@
     <MESSAGE value="Add Movement and Gravity to Dave Class" />
     <MESSAGE value="Remade Start Screen" />
     <MESSAGE value="Finally got stuff working" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finally got stuff working" />
+    <MESSAGE value="Kinda have a start button." />
+    <option name="LAST_COMMIT_MESSAGE" value="Kinda have a start button." />
   </component>
 </project>
