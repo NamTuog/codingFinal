@@ -1,5 +1,6 @@
 import pygame
 
+items = []
 class SpeedUp():
     def __init__(self,x,y):
         self.x = x
@@ -9,7 +10,6 @@ class SpeedUp():
         self.img = pygame.transform.scale(self.img, self.size)
         self.rect = self.img.get_rect()
         self.rect.move(x, y)
-
     def collectSpeed(self):
             self.kill
 
