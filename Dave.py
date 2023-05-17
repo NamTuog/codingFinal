@@ -1,5 +1,5 @@
-import pygame
-
+import pygame, time
+import Items
 
 class Dave():
     def __init__(self, x, y):
@@ -145,6 +145,11 @@ class Dave():
                     while jumpBoost == True:
                         self.jump = self.jump * 1.5
                         self.speed = self.speed * 0.5
+                    while subBoost = True:
+                        for pygame.time.get_ticks() % (20) == 0
+                            self.health == 10000
+                        self.health = 1
+                        subBoost = False
     def die(self):
         game = 0
         # Restart game

@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ae6d51bf-977a-4209-8fe5-130dc55df491" name="Changes" comment="Finally got stuff working">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="ae6d51bf-977a-4209-8fe5-130dc55df491" name="Changes" comment="Work on items">
+      <change beforePath="$PROJECT_DIR$/Dave.py" beforeDir="false" afterPath="$PROJECT_DIR$/Dave.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +33,11 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\hitchenb\PycharmProjects\codingFinal" />
+    </key>
   </component>
   <component name="RunManager" selected="Python.main">
     <configuration name="Python 3.10 W Pygame" type="PythonConfigurationType" factoryName="Python">
@@ -211,7 +216,28 @@
       <option name="project" value="LOCAL" />
       <updated>1684254049756</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Finally got stuff working">
+      <created>1684332804987</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1684332804987</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Move Dave to own folder">
+      <created>1684333244659</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1684333244659</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Work on items">
+      <created>1684333973501</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1684333973501</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -246,7 +272,9 @@
     <MESSAGE value="Add Movement and Gravity Dave Class" />
     <MESSAGE value="Add Movement and Gravity to Dave Class" />
     <MESSAGE value="Remade Start Screen" />
-    <MESSAGE value="Finally got stuff working" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finally got stuff working" />
+    <MESSAGE value="Test" />
+    <MESSAGE value="Move Dave to own folder" />
+    <MESSAGE value="Work on items" />
+    <option name="LAST_COMMIT_MESSAGE" value="Work on items" />
   </component>
 </project>
