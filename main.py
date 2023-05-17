@@ -14,4 +14,5 @@ while True:
     SCREEN.blit(StartScreen.showthis.image, StartScreen.showthis.rect)
     #Displays the first button for the menu
     StartScreen.showthis.button1(SCREEN)
+    SCREEN.blit(StartScreen.create_Font("Play Game"), (80, 250))
     pygame.display.update()
