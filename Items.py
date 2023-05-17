@@ -26,7 +26,7 @@ class JumpUp():
 
     def collectJump(self,Dave.rect):
         if pygame.Rect.colliderect(Dave.rect,self.rect):
-            self.rect.move(-20,-20)
+            self.kill()
 
 class Sub():
     def __init__(self,x,y):
