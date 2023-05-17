@@ -10,9 +10,8 @@ class SpeedUp():
         self.rect = self.img.get_rect()
         self.rect.move(x, y)
 
-    def collectSpeed(self,Dave.rect):
-        if pygame.Rect.colliderect(Dave.rect,self.rect):
-            self.rect.move(-20,-20)
+    def collectSpeed(self):
+            self.kill
 
 class JumpUp():
     def __init__(self,x,y):
@@ -24,8 +23,7 @@ class JumpUp():
         self.rect = self.img.get_rect()
         self.rect.move(x, y)
 
-    def collectJump(self,Dave.rect):
-        if pygame.Rect.colliderect(Dave.rect,self.rect):
+    def collectJump(self):
             self.kill()
 
 class Sub():
@@ -38,6 +36,5 @@ class Sub():
         self.rect = self.img.get_rect()
         self.rect.move(x,y)
 
-    def collectSub(self,Dave.rect):
-        if pygame.Rect.colliderect(Dave.rect,self.rect):
-            self.rect.move(-20,-20)
+    def collectSub(self):
+        self.kill
