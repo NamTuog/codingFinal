@@ -1,31 +1,40 @@
+import pygame
+
+
 class Dave():
     def __init__(self, x, y):
+        self.size = (100, 100)
         self.x = int(x)
         self.y = int(y)
-        self.size = (12, 12)
         self.health = 1
         self.speed = 1
         self.default_img = pygame.image.load('IDLE1.png')
-        self.img = self.defaultimg
+        self.img = self.default_img
+        self.img = pygame.transform.scale(self.img, self.size)
+        self.rect = self.img.get_rect()
+        self.box = pygame.Rect(self.x, self.rect.y, self.rect.width - 20, self.rect.height)
+
+        # Changing images
         self.image_frame = 1
         self.img_time = 0
         self.img_change = False
-        self.img = pygame.transform.scale(self.img, self.size)
-        self.rect = self.img.get_rect()
+        self.image_flipped = False
 
-        # Directions (only = True when the key is pressed)
+        # Directions
         self.left = False
         self.right = False
         self.down = False
-        # Movement of the player. Is added to the X/Y coordinates after clicking.
+
+        # X/Y coordinates
         self.movement_x = 0
         self.movement_y = 0
-        # Jumping
+
+        # Jump
         self.up = False
         self.jump = False
-        self.jump_speed = 25
+        self.jump_speed = 20
 
-    def move(self):  # including jump
+    def move(self, ground, platform):
         self.movement_x = 0
         self.movement_y = 0
 
@@ -33,24 +42,27 @@ class Dave():
         if self.left and self.x > -1:  # and not self.right
             self.movement_x = - self.speed
             self.img_change = True
+            self.image_flipped = True
+            self.img = pygame.transform.flip(self.default_img, True, False)
 
         # Right
-        elif self.right and self.x <= 1570:
+        elif self.right and self.x <= 320:
             self.movement_x = self.speed
             self.img_change = True
+            self.image_flipped = False
 
             # Down
         elif self.down and self.y >= 0:
-            self.movement_y = self.speed * 0.8
+            self.movement_y = self.speed
 
-        # Jumping
-        if self.up and self.rect.colliderect(ground) and not self.jump:
+            # Up
+        if self.up and not self.jump:
             self.jump = True
             self.movement_y = -self.jump_speed * 2
 
-        # Diagonal Movements
+        # Diagonal (Left + Jump)
 
-        if self.left and self.up and self.x > -1 and self.y <= 904:
+        if self.left and self.up and self.x > -1 and self.y <= 320:
             if self.jump == False:
                 self.jump = True
                 self.movement_x = -self.speed
@@ -58,13 +70,9 @@ class Dave():
             else:
                 pass
 
+        # Diagonal (Right + Up)
 
-        elif self.left and self.down and self.x > -1 and self.y >= 0:
-            self.movement_x = -self.speed
-            self.movement_y = self.speed * 0.8
-
-
-        elif self.right and self.up and self.x <= 1570 and self.y <= 904:
+        elif self.right and self.up and self.x <= 320 and self.y <= 304:
             if self.jump == False:
                 self.jump = True
                 self.movement_x = self.speed
@@ -72,32 +80,45 @@ class Dave():
             else:
                 pass
 
-        elif self.right and self.down and self.y >= 0 and self.x <= 1570:
-            self.movement_x = self.speed
-            self.movement_y = self.speed * 0.8
-        # Updating to the final location (x and y)
+        # Location Updating
         self.x += self.movement_x
         self.y += self.movement_y
 
-        # Image Changing
-        if self.img_change:
-            if self.image_frame % 10 == 0:
-                if self.img == self.default.img:
-                    self.img = pygame.image.load('RUN1.png')
+        # Image Changing / Walking
+        if self.img_change == True:
+            if self.image_frame % 10 == 0:  # Every 10 frames
+                if self.img == self.default_img:
+                    self.size = (100, 100)
+                    self.img = pygame.image.load('IDLE2.png')
+                    self.img = pygame.transform.scale(self.img, self.size)
                 else:
-                    self.img = self.default_img
-                    self.img_change = False
-                self.image_frame += 1
+                    if self.image_flipped:
+                        self.img = pygame.transform.flip(self.default_img, True, False)
+                    else:
+                        self.img = self.default_img
+                        self.img_change = False
+            self.image_frame += 1
 
         self.rect = pygame.Rect(int(self.x), int(self.y), 32, 32)
 
-    def fall(self):
-        if not self.rect.colliderect(ground):  # If the player is not on the ground (on the sky)
-            self.movement_y += 2.5  # Falls down to the ground with the speed of 3.
+    # Gravity
+    def fall(self, ground, platform):
+
+        self.box.x = self.x
+        self.box.y = self.y
+
+        if not self.box.colliderect(ground):
+            if self.box.colliderect(platform):
+                if self.up:
+                    self.jump = True
+                    self.movement_y = -self.jump_speed * 2.5
+                else:
+                    self.movement_y = 0
+            else:
+                self.movement_y += 1.5
         else:
             self.jump = False
 
-            # Updating to the final location (x and y)
         self.x += self.movement_x
         self.y += self.movement_y
 
