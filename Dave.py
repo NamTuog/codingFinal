@@ -125,14 +125,26 @@ class Dave():
         self.rect = pygame.Rect(int(self.x), int(self.y), 32, 32)
 
     def pickup(self):
-        if pygame.Rect.colliderect(self.rect, SpeedUp.rect):
-            self.speed = self.speed * 1.5
-            SpeedUp.collectSpeed()
-        if pygame.Rect.colliderect(self.rect, JumpUp.rect):
-            JumpUp.collectJump()
-        if pygame.Rect.colliderect(self.rect, Subway.rect):
-            SpeedUp.collectSub()
-
+        for item in items:
+            if pygame.Rect.colliderect(self.rect, SpeedUp.rect):
+                speedBoost = True
+                SpeedUp.collectSpeed()
+                self.health += 1
+            if pygame.Rect.colliderect(self.rect, JumpUp.rect):
+                jumpBoost = True
+                JumpUp.collectJump()
+                self.health += 1
+            if pygame.Rect.colliderect(self.rect, Subway.rect):
+                subBoost = True
+                SpeedUp.collectSub()
+                self.health += 1
+                while self.health > 1:
+                    while speedBoost == True:
+                        self.speed = self.speed * 1.5
+                        self.jump = self.jump * 0.5
+                    while jumpBoost == True:
+                        self.jump = self.jump * 1.5
+                        self.speed = self.speed * 0.5
     def die(self):
         game = 0
         # Restart game
