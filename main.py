@@ -3,7 +3,7 @@ from pygame.locals import QUIT
 
 
 pygame.init()
-SCREEN = pygame.display.set_mode((400, 300))
+SCREEN = pygame.display.set_mode((800, 600))
 pygame.display.set_caption('Hello World!')
 while True:
     for event in pygame.event.get():
