@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ae6d51bf-977a-4209-8fe5-130dc55df491" name="Changes" comment="Organized into classes">
-      <change afterPath="$PROJECT_DIR$/Classes/Ground.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Classes/Platform.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Classes/Alien.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/Alien.py" afterDir="false" />
+    <list default="true" id="ae6d51bf-977a-4209-8fe5-130dc55df491" name="Changes" comment="Work on items">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Classes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dave.py" beforeDir="false" afterPath="$PROJECT_DIR$/Dave.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Items.py" beforeDir="false" afterPath="$PROJECT_DIR$/Items.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +39,6 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\hitchenb\PycharmProjects\codingFinal\Classes" />
       <recent name="C:\Users\hitchenb\PycharmProjects\codingFinal" />
     </key>
   </component>
@@ -254,21 +254,7 @@
       <option name="project" value="LOCAL" />
       <updated>1684334597296</updated>
     </task>
-    <task id="LOCAL-00023" summary="Work on items">
-      <created>1684419428246</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1684419428246</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Work on items">
-      <created>1684419495677</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1684419495677</updated>
-    </task>
-    <option name="localTasksCounter" value="25" />
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -305,8 +291,7 @@
     <MESSAGE value="Remade Start Screen" />
     <MESSAGE value="Test" />
     <MESSAGE value="Move Dave to own folder" />
-    <MESSAGE value="Organized into classes" />
-    <MESSAGE value="Organized files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Organized into classes" />
+    <MESSAGE value="Work on items" />
+    <option name="LAST_COMMIT_MESSAGE" value="Work on items" />
   </component>
 </project>
