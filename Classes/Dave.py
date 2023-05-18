@@ -1,5 +1,5 @@
 import pygame
-import Time
+import time
 import Items
 
 class Dave():

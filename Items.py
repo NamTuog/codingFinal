@@ -11,7 +11,7 @@ class SpeedUp():
         self.rect = self.img.get_rect()
         self.rect.move(x, y)
     def collectSpeed(self):
-            self.kill
+        self.kill
 
 class JumpUp():
     def __init__(self,x,y):
