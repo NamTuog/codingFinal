@@ -124,8 +124,8 @@ class Dave():
 
         self.rect = pygame.Rect(int(self.x), int(self.y), 32, 32)
 
-    def pickup(self):
-        for item in Items.items:
+    def pickup(self): # For when player picks up items
+        for item in Items.items: # Depending on item picked up, that item = True
             if pygame.Rect.colliderect(self.rect, Items.SpeedUp.rect):
                 speedBoost = True
                 Items.SpeedUp.collectSpeed()
@@ -138,14 +138,14 @@ class Dave():
                 subBoost = True
                 Items.SpeedUp.collectSub()
                 self.health += 1
-                while self.health > 1:
+                while self.health > 1: # Player loses effect when they take damage
                     while speedBoost == True:
                         self.speed = self.speed * 1.5
                         self.jump = self.jump * 0.5
                     while jumpBoost == True:
                         self.jump = self.jump * 1.5
                         self.speed = self.speed * 0.5
-                    while subBoost = True:
+                    while subBoost = True: # Immortality last for a duration, then returns player health to 1
                         for pygame.time.get_ticks() % (20) == 0
                             self.health == 10000
                         self.health = 1
