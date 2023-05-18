@@ -1,5 +1,5 @@
-import pygame
-import Items
+import pygame, time
+import Items, Spike
 
 class Dave():
     def __init__(self, x, y):
@@ -125,10 +125,10 @@ class Dave():
         self.rect = pygame.Rect(int(self.x), int(self.y), 32, 32)
 
     def pickup(self):
-        for item in Items.items:
-            if pygame.Rect.colliderect(self.rect, Items.SpeedUp.rect):
-                speedBoost = True
-                Items.SpeedUp.collectSpeed()
+        for item in Items.items: # Checks all items in list
+            if pygame.Rect.colliderect(self.rect, Items.SpeedUp.rect): # Check for collision "type"
+                speedBoost = True   # Effect  = True
+                Items.SpeedUp.collectSpeed()    # Remove the item from the screen
                 self.health += 1
             if pygame.Rect.colliderect(self.rect, Items.JumpUp.rect):
                 jumpBoost = True
@@ -138,18 +138,32 @@ class Dave():
                 subBoost = True
                 Items.SpeedUp.collectSub()
                 self.health += 1
-                while self.health > 1:
-                    while speedBoost == True:
+                while self.health > 1:  # While player doesn't take damage
+                    while speedBoost == True:   # Grant speed up, jump down
                         self.speed = self.speed * 1.5
                         self.jump = self.jump * 0.5
-                    while jumpBoost == True:
+                    while jumpBoost == True:    # Grants jump up, speed down
                         self.jump = self.jump * 1.5
                         self.speed = self.speed * 0.5
                     while subBoost = True:
-                        for pygame.time.get_ticks() % (20) == 0
-                            self.health == 10000
+                        for pygame.time.get_ticks() % (20) == 0     # Grants effect for time duration
+                            self.health == 9999
                         self.health = 1
                         subBoost = False
+
+    def checkHit(self):
+        if self.health == 0:
+            die()
+        for spike in spikes():
+            if pygame.Rect.colliderect(self.rect, Spike.spike.rect):
+                self.health -= 1
+        for alien in enemies():
+            if pygame.Rect.colliderect(self.rect, Alien.alien.rect):
+                self.health -= 1
+        for robot in enemies():
+            if pygame.Rect.colliderect(self.rect, Robot.robot.rect):
+                self.health -= 1
+
     def die(self):
         game = 0
         # Restart game
