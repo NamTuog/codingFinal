@@ -1,5 +1,5 @@
 import pygame, time
-import Items, Spike, Alien, Robot
+
 
 class Dave():
     def __init__(self, x, y):

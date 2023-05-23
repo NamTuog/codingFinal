@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ae6d51bf-977a-4209-8fe5-130dc55df491" name="Changes" comment="Work on items" />
+    <list default="true" id="ae6d51bf-977a-4209-8fe5-130dc55df491" name="Changes" comment="Work on player enemy collisions">
+      <change beforePath="$PROJECT_DIR$/Level1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Level1.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -256,7 +258,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684419428246</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Work on player enemy collisions">
+      <created>1684851429747</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1684851429747</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -294,6 +303,7 @@
     <MESSAGE value="Test" />
     <MESSAGE value="Move Dave to own folder" />
     <MESSAGE value="Work on items" />
-    <option name="LAST_COMMIT_MESSAGE" value="Work on items" />
+    <MESSAGE value="Work on player enemy collisions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Work on player enemy collisions" />
   </component>
 </project>
