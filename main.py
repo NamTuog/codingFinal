@@ -25,5 +25,7 @@ while True:
     SCREEN.blit(StartScreen.create_Font("DAVE'S DASH", 88), (30, 10))
     #Displays the first button for the menu
     StartScreen.showthis.button1(SCREEN)
-    SCREEN.blit(StartScreen.create_Font("Play Game"), (80, 250))
+    SCREEN.blit(StartScreen.create_Font("Play Game", 22, StartScreen.showthis.button1colour), (80, 250))
+    #Check if the mouse is pressing the button (Currently have a placeholder instead of calling level 1)
+    StartScreen.showthis.mousecheck()
     pygame.display.update()
