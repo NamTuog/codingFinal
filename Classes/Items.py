@@ -1,7 +1,8 @@
 import pygame
 
-class SpeedUp():
-    def __init__(self,x,y):
+items = []
+class SpeedUp(): # Item gives player a speed up at tho cost of a jump down
+    def __init__(self,x,y): # Creates self and takes spawn point
         self.x = x
         self.y = y
         self.size = (5,5)
@@ -9,11 +10,10 @@ class SpeedUp():
         self.img = pygame.transform.scale(self.img, self.size)
         self.rect = self.img.get_rect()
         self.rect.move(x, y)
-
     def collectSpeed(self):
-            self.kill
+        self.kill
 
-class JumpUp():
+class JumpUp(): # Item gives player a jump up at tho cost of a speed down
     def __init__(self,x,y):
         self.x = x
         self.y = y
@@ -26,7 +26,7 @@ class JumpUp():
     def collectJump(self):
             self.kill()
 
-class Sub():
+class Sub(): # Grants the player temporary immortality
     def __init__(self,x,y):
         self.x = x
         self.y = y
