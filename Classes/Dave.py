@@ -1,5 +1,5 @@
 import pygame, time
-
+import Items, Spike
 
 class Dave():
     def __init__(self, x, y):
@@ -151,7 +151,7 @@ class Dave():
                         self.health = 1
                         subBoost = False
 
-    def checkHit(self, spikes, enemies):
+    def checkHit(self):
         if self.health == 0:
             die()
         for spike in spikes():
