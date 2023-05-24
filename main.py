@@ -29,3 +29,5 @@ while True:
     #Check if the mouse is pressing the button (Currently have a placeholder instead of calling level 1)
     StartScreen.showthis.mousecheck()
     pygame.display.update()
+
+#while level1 == True:

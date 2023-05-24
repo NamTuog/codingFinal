@@ -28,7 +28,8 @@ class menu:
                 check2 = pygame.mouse.get_pressed(num_buttons=3)
                 if check2 == (True, False, False):
                     #Placeholder for calling level 1
-                    print("hi")
+                    Level = 1
+                    return Level
 
 
 showthis = menu()
