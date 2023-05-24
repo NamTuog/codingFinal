@@ -1,4 +1,4 @@
-import pygame, sys, StartScreen
+import pygame, sys, StartScreen, Level1
 from pygame.locals import QUIT
 
 
@@ -30,4 +30,10 @@ while True:
     StartScreen.showthis.mousecheck()
     pygame.display.update()
 
-#while level1 == True:
+Level1.init_1()
+while level1 == True:
+    for enemy in enemies:
+        SCREEN.blit(enemy.img,enemy.rect)
+    for spike in spikes
+        SCREEN.blit(SPIKE.png, spike.rect)
+    screen.blit(Dave.rect)
