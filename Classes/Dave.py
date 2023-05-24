@@ -151,7 +151,7 @@ class Dave():
                         self.health = 1
                         subBoost = False
 
-    def checkHit(self):
+    def checkHit(self):     # Check for any collision between the player and any enemy
         if self.health == 0:
             die()
         for spike in spikes():
