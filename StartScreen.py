@@ -2,7 +2,7 @@ import pygame
 
 #Font creator function provided by Tristan
 def create_Font(t,s=22,c=(255, 0, 0), b=False,i=False):
-    font = pygame.font.SysFont("Times New Roman", s, bold=b, italic=i)
+    font = pygame.font.SysFont("Arial", s, bold=b, italic=i)
     text = font.render(t, True, c)
     return text
 
