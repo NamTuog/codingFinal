@@ -21,6 +21,7 @@ class Lv1():
         spikes.append(spike)
         alien = Alien.Alien(240,10)
         enemies.append(alien)
+        return spikes, enemies
 
     def update(self,enemies,spikes,Dave):
         SCREEN.blit(self.image, self.rect)
