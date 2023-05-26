@@ -1,15 +1,12 @@
-import pygame, sys, StartScreen, Level1
+import pygame, sys, StartScreen
+
 from pygame.locals import QUIT
 
 
 pygame.init()
 SCREEN = pygame.display.set_mode((800, 600))
-pygame.display.set_caption('Hello World!')
+pygame.display.set_caption("Dave's Dash")
 while True:
-    for event in pygame.event.get():
-        if event.type == QUIT:
-            pygame.quit()
-            sys.exit()
     # Mouse tracking function that I sorta kinda took (WIP)
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -27,13 +24,13 @@ while True:
     StartScreen.showthis.button1(SCREEN)
     SCREEN.blit(StartScreen.create_Font("Play Game", 22, StartScreen.showthis.button1colour), (80, 250))
     #Check if the mouse is pressing the button (Currently have a placeholder instead of calling level 1)
-    StartScreen.showthis.mousecheck()
+    Level = StartScreen.showthis.mousecheck()
     pygame.display.update()
 
 Level1.init_1()
-while level1 == True:
-    for enemy in enemies:
-        SCREEN.blit(enemy.img,enemy.rect)
-    for spike in spikes
-        SCREEN.blit(SPIKE.png, spike.rect)
-    screen.blit(Dave.rect)
+while level == 1:
+    for event in pygame.event.get():
+        if event.type == QUIT:
+            pygame.quit()
+            sys.exit()
+    Level1.update()

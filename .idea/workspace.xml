@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c6433599-65ca-4cbd-88db-aa5d988326a4" name="Changes" comment="Quick Update">
-      <change beforePath="$PROJECT_DIR$/Classes/Spike.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/Spike.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Classes/Alien.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/Alien.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Level1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Level1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -93,7 +94,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ae6d51bf-977a-4209-8fe5-130dc55df491" name="Changes" comment="Remade Start Screen" />
+      <changelist id="c6433599-65ca-4cbd-88db-aa5d988326a4" name="Changes" comment="Quick Update" />
       <created>1683641983936</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
