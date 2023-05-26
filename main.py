@@ -15,7 +15,7 @@ while True:
         if event.type == pygame.MOUSEBUTTONDOWN:
             pos = pygame.mouse.get_pos()
             btn = pygame.mouse
-            print("x = {}, y = {}".format(pos[0], pos[1]))
+            print("x = {}, y = {}".format(pos[0], pos[1]))  #TEMPORARY
     #Displays the background photo for the Menu
     SCREEN.blit(StartScreen.showthis.image, StartScreen.showthis.rect)
     #Displays the title
@@ -28,7 +28,7 @@ while True:
     pygame.display.update()
 
 Level1.init_1()
-while level == 1:
+while Level == 1:
     for event in pygame.event.get():
         if event.type == QUIT:
             pygame.quit()
