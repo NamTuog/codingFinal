@@ -1,5 +1,5 @@
 import pygame, time
-import Items, Spike
+import Items
 
 class Dave():
     def __init__(self, x, y):
@@ -145,9 +145,9 @@ class Dave():
                     while jumpBoost == True:    # Grants jump up, speed down
                         self.jump = self.jump * 1.5
                         self.speed = self.speed * 0.5
-                    while subBoost = True:
+                    while subBoost == True:
                         for pygame.time.get_ticks() % (20) == 0     # Grants effect for time duration
-                            self.health == 9999
+                            self.health = 9999
                         self.health = 1
                         subBoost = False
 
