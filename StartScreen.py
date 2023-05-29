@@ -20,16 +20,18 @@ class menu:
         return self.button1set
     #Checks if the mouse is clicking the start button for the game
     def mousecheck(self):
-        self.button1colour = (255, 0, 0)
-        currentpos = pygame.mouse.get_pos()
-        if currentpos[0] >= 30 and currentpos[0] <= 280:
-            if currentpos[1] >= 200 and currentpos[1] <= 300:
-                self.button1colour = (255, 255, 102)
-                check2 = pygame.mouse.get_pressed(num_buttons=3)
-                if check2 == (True, False, False):
-                    #Placeholder for calling level 1
-                    Level = 1
-                    return Level
+        Level = 0
+        while Level == 0:
+            self.button1colour = (255, 0, 0)
+            currentpos = pygame.mouse.get_pos()
+            if currentpos[0] >= 30 and currentpos[0] <= 280:
+                if currentpos[1] >= 200 and currentpos[1] <= 300:
+                    self.button1colour = (255, 255, 102)
+                    check2 = pygame.mouse.get_pressed(num_buttons=3)
+                    if check2 == (True, False, False):
+                        #Placeholder for calling level 1
+                        Level = 1
+        return Level
 
 
 showthis = menu()
