@@ -32,7 +32,7 @@ while Level == 0:
 
 # LEVEL 1 START
 Lv1 = Level1.Lv1
-spikes, enemies = Level1.Lv1.init_1(Dave,Spike,Alien)
+spikes, enemies = Level1.Lv1.init_1(Lv1,Dave,Spike,Alien)
 while Level == 1:
     for event in pygame.event.get():
         if event.type == QUIT:

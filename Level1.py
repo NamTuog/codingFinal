@@ -10,6 +10,7 @@ class Lv1():
     def init_1(self,Dave,Spike,Alien):   # Creates and moves all assests for the first level
         spikes = ()
         enemies = ()
+        Dave = Dave.Dave(125,10)
         Dave.rect = Dave.rect.move(125,10)
         spike = Spike.Spike(200, 10)
         spikes.append(spike)
@@ -19,7 +20,7 @@ class Lv1():
         spikes.append(spike)
         spike = Spike.Spike(230,10)
         spikes.append(spike)
-        alien = Alien.Alien(240,10)
+        alien = Alien.Alien(240,10,10)
         enemies.append(alien)
         return spikes, enemies
 
