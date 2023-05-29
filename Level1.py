@@ -1,5 +1,5 @@
 import pygame
-import Dave, Spike, Alien
+from Classes import Dave, Spike, Alien
 
 class Lv1():
     def __init__(self):
@@ -29,3 +29,5 @@ class Lv1():
         for spike in spikes:
             SCREEN.blit(SPIKE.png, spike.rect)
         SCREEN.blit(Dave.rect)
+
+lvl1call = Lv1()

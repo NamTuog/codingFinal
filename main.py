@@ -1,4 +1,4 @@
-import pygame, sys, StartScreen
+import pygame, sys, StartScreen, Level1
 
 from pygame.locals import QUIT
 
@@ -25,6 +25,13 @@ while True:
     SCREEN.blit(StartScreen.create_Font("Play Game", 22, StartScreen.showthis.button1colour), (80, 250))
     #Check if the mouse is pressing the button (Currently have a placeholder instead of calling level 1)
     Level = StartScreen.showthis.mousecheck()
+    Level1.lvl1call.init_1()
+    while Level == 1:
+        for event in pygame.event.get():
+            if event.type == QUIT:
+                pygame.quit()
+                sys.exit()
+        Level1.update()
     pygame.display.update()
 
 Level1.init_1()
