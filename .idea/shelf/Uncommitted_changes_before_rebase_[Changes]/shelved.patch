@@ -1,0 +1,11 @@
+Index: Level1.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Level1.py b/Level1.py
+--- a/Level1.py	(revision a8d19dedd8864cb65cfeed2b0b71a01b80521f40)
++++ b/Level1.py	(date 1684849029123)
+@@ -1,0 +1,2 @@
++
++
