@@ -6,10 +6,14 @@ from pygame.locals import QUIT
 pygame.init()
 SCREEN = pygame.display.set_mode((800, 600))
 pygame.display.set_caption("Dave's Dash")
+clock = pygame.time.Clock()
+
+
 
 # MAIN MENU
 Level = 0
-while Level == 0:
+while Level != 1:
+    clock.tick(30)
     # Mouse tracking function that I sorta kinda took (WIP)
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -32,11 +36,13 @@ while Level == 0:
 
 
 #LEVEL 1 START
-Lv1 = Level1.Lv1
-spikes, enemies = Level1.Lv1.init_1(Lv1,Dave,Spike,Alien)
+Lv1 = Level1.Lv1()
+spikes, enemies, Dave = Level1.Lv1.init_1(Lv1,Dave,Spike,Alien)
 while Level == 1:
+    clock.tick(60)
     for event in pygame.event.get():
         if event.type == QUIT:
             pygame.quit()
             sys.exit()
-    Level1.update(Lv1,enemies,spikes,Dave)
+    Level1.update(Lv1,enemies,spikes,Dave,SCREEN)
+    pygame.display.update()
