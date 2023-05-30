@@ -2,126 +2,112 @@ import pygame, time
 
 class Dave():
     def __init__(self, x, y):
-        self.size = (100, 100)
         self.x = int(x)
         self.y = int(y)
+        self.size = (100, 100)
         self.health = 1
-        self.speed = 1
-        self.default_img = pygame.image.load('IDLE1.png')
-        self.img = self.default_img
-        self.img = pygame.transform.scale(self.img, self.size)
-        self.rect = self.img.get_rect()
-        self.box = pygame.Rect(self.x, self.rect.y, self.rect.width - 20, self.rect.height)
+        self.speed = 4
+        self.default_img = pygame.image.load('Images/IDLE1.png')  # First image
+        self.image = self.default_img
+        self.rect = self.image.get_rect()
 
-        # Changing images
-        self.image_frame = 1
-        self.img_time = 0
-        self.img_change = False
-        self.image_flipped = False
+        # movements (jump)
+        self.jump = False  # Check if Jumping is true or not
+        self.jump_time = 0  # Duration of Jumping
+        self.velocity_y = 0  # Speed of Jumping and Gravity
 
-        # Directions
-        self.left = False
-        self.right = False
-        self.down = False
+        # Changing Images
+        self.image_frame = 1  # Frame for change
+        self.image_time = 0  # Duration
+        self.image_Change = False  # Walking motion
+        self.image_Flipped = False
 
-        # X/Y coordinates
-        self.movement_x = 0
-        self.movement_y = 0
+        self.rect.x = self.x
+        self.rect.y = self.y
 
-        # Jump
-        self.up = False
-        self.jump = False
-        self.jump_speed = 20
+    def move(self, platform, ground):
+        # Movements
+        self.movement_x = 0  # X movements that are totally added
+        self.movement_y = 0  # Y movements that are totallya dded
 
-    def move(self, ground, platform):
-        self.movement_x = 0
-        self.movement_y = 0
+        # Key
+        key = pygame.key.get_pressed()
 
-        # Left
-        if self.left and self.x > -1:  # and not self.right
-            self.movement_x = - self.speed
-            self.img_change = True
-            self.image_flipped = True
-            self.img = pygame.transform.flip(self.default_img, True, False)
+        # Left & Right Keys
+        if key[pygame.K_LEFT]:
+            self.movement_x = - self.speed  # Backwards
+            self.image_Change = True
+            self.image_Flipped = True  # Flip image to the left
 
-        # Right
-        elif self.right and self.x <= 320:
-            self.movement_x = self.speed
-            self.img_change = True
-            self.image_flipped = False
+        if key[pygame.K_RIGHT]:
+            self.movement_x = self.speed  # Right side
+            self.image_Change = True
+            self.image_Flipped = False  # Not flipping the iamge
 
-            # Down
-        elif self.down and self.y >= 0:
-            self.movement_y = self.speed
+        # Jumping
 
-            # Up
-        if self.up and not self.jump:
-            self.jump = True
-            self.movement_y = -self.jump_speed * 2
+        if not self.jump:  # Prevents Double Jumps
+            if key[pygame.K_UP] or key[pygame.K_SPACE]:  # When the Up or space is pressed
+                if self.rect.colliderect(ground):  # When colliding with the ground
+                    self.jump = True  # Jumping is valid
+                    self.jump_time = pygame.time.get_ticks()  # Measure the time
+                    self.velocity_y = -10  # Goes Up for 10
 
-        # Diagonal (Left + Jump)
+        if self.jump:  # While it is jumping
+            time_now = pygame.time.get_ticks()  # Time Now
+            time_difference = time_now - self.jump_time  # Differnce betwen the time
+            if time_difference > 5000:  # If the time difference is bigger than 5000
+                self.jump = False  # Jump finishes   (Does not go forever)
 
-        if self.left and self.up and self.x > -1 and self.y <= 320:
-            if self.jump == False:
-                self.jump = True
-                self.movement_x = -self.speed
-                self.movement_y = -self.jump_speed
+        # Walking Motion
+        if self.image_Change:  # When self.image_Change is true from left & right movements
+            if self.image_frame % 30 == 0:  # Every 10 Frames
+                self.image = pygame.image.load('Images/IDLE2.png')  # Load another image
+                self.image = pygame.transform.scale(self.image, self.size)
             else:
-                pass
-
-        # Diagonal (Right + Up)
-
-        elif self.right and self.up and self.x <= 320 and self.y <= 304:
-            if self.jump == False:
-                self.jump = True
-                self.movement_x = self.speed
-                self.movement_y = -self.jump_speed
-            else:
-                pass
-
-        # Location Updating
-        self.x += self.movement_x
-        self.y += self.movement_y
-
-        # Image Changing / Walking
-        if self.img_change == True:
-            if self.image_frame % 10 == 0:  # Every 10 frames
-                if self.img == self.default_img:
-                    self.size = (100, 100)
-                    self.img = pygame.image.load('IDLE2.png')
-                    self.img = pygame.transform.scale(self.img, self.size)
-                else:
-                    if self.image_flipped:
-                        self.img = pygame.transform.flip(self.default_img, True, False)
-                    else:
-                        self.img = self.default_img
-                        self.img_change = False
+                self.image = self.default_img  # Go back to the original image
+                self.image_Change = False
             self.image_frame += 1
 
-        self.rect = pygame.Rect(int(self.x), int(self.y), 32, 32)
+            # Image Switching
+        if self.image_Flipped:  # When flipped is true
+            self.image = pygame.transform.flip(self.default_img, True, False)  # flip the image
 
-    # Gravity
-    def fall(self, ground, platform):
+        # Gravity when collding with the platform or the ground
+        if not self.rect.colliderect(ground):  # When the player is not colliding with the ground
+            if self.rect.colliderect(platform):  # When colliding with the platform
+                if self.rect.top > platform.rect.top:  # if platform's top is higher than the self's top
+                    self.velocity_y += 1  # Go down (Gravity is Valid)
+                elif self.rect.bottom > platform.rect.top:  # If the platform's top is higher than self's bottom
+                    self.rect.bottom = platform.rect.top  # The player is over the platform
+                    self.velocity_y = 0  # y movement is zero (staying on the platform)
+                    if key[pygame.K_UP] or key[pygame.K_SPACE]:  # Jumping is valid on the platform
+                        self.jump = True
+                        self.velocity_y = -10
 
-        self.box.x = self.x
-        self.box.y = self.y
+            else:  # If the player is not colliding with the platform
+                self.velocity_y += 1  # Gravity is valid
 
-        if not self.box.colliderect(ground):
-            if self.box.colliderect(platform):
-                if self.up:
-                    self.jump = True
-                    self.movement_y = -self.jump_speed * 2.5
-                else:
-                    self.movement_y = 0
-            else:
-                self.movement_y += 1.5
         else:
-            self.jump = False
+            self.jump = False  # Prevents double jump
 
-        self.x += self.movement_x
-        self.y += self.movement_y
+        self.movement_y += self.velocity_y  # Add all the velocities including Jump and Gravity to the movement_y
+        self.rect.x += self.movement_x  # Move the player
+        self.rect.y += self.movement_y  # Move the player
 
-        self.rect = pygame.Rect(int(self.x), int(self.y), 32, 32)
+        # Preventing the player to go outside of the screen
+        if self.rect.bottom > 400:
+            self.rect.bottom = 400
+            self.movement_y = 0
+        if self.rect.top < 0:
+            self.rect.top = 0
+            self.movement_y = 0
+        if self.rect.right > 800:
+            self.rect.right = 800
+            self.movement_x = 0
+        if self.rect.left < 0:
+            self.rect.left = 0
+            self.movement_x = 0
 
     def pickup(self):
         for item in Items.items: # Checks all items in list
