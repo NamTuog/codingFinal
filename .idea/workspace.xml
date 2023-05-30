@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c6433599-65ca-4cbd-88db-aa5d988326a4" name="Changes" comment="idk">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Level1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Level1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StartScreen.py" beforeDir="false" afterPath="$PROJECT_DIR$/StartScreen.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-    </list>
+    <list default="true" id="c6433599-65ca-4cbd-88db-aa5d988326a4" name="Changes" comment="alessio version" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -94,7 +89,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ae6d51bf-977a-4209-8fe5-130dc55df491" name="Changes" comment="Remade Start Screen" />
+      <changelist id="c6433599-65ca-4cbd-88db-aa5d988326a4" name="Changes" comment="alessio version" />
       <created>1683641983936</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -282,7 +277,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685370361049</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="alessio version">
+      <created>1685456894106</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1685456894106</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -322,6 +324,7 @@
     <MESSAGE value="Work on items" />
     <MESSAGE value="Create Spike" />
     <MESSAGE value="Changed font to arial" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed font to arial" />
+    <MESSAGE value="alessio version" />
+    <option name="LAST_COMMIT_MESSAGE" value="alessio version" />
   </component>
 </project>
