@@ -44,5 +44,5 @@ while Level == 1:
         if event.type == QUIT:
             pygame.quit()
             sys.exit()
-    Level1.update(Lv1,enemies,spikes,Dave,SCREEN)
+    Level1.update(Lv1,enemies,spikes,Dave,SCREEN,Alien)
     pygame.display.update()

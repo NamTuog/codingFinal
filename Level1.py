@@ -24,10 +24,10 @@ class Lv1():
         enemies.append(alien)
         return spikes, enemies, Dave
 
-def update(Lv1,enemies,spikes,Dave, SCREEN):
+def update(Lv1,enemies,spikes,Dave,SCREEN,Alien):
     SCREEN.blit(Lv1.image, Lv1.rect)
-    for enemy in enemies:
-        SCREEN.blit(enemy.img,enemy.rect)
+    for alien in enemies:
+        SCREEN.blit(alien.img, alien.rect)
     for spike in spikes:
-        SCREEN.blit(spike.png, spike.rect)
-    SCREEN.blit(Dave.rect)
+        SCREEN.blit(spike.img, spike.rect)
+    SCREEN.blit(Dave.image,Dave.rect)
