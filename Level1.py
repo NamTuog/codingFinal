@@ -11,18 +11,20 @@ class Lv1():
         spikes = []
         enemies = []
         Dave = Dave.Dave(125,10)
-        Dave.rect = Dave.rect.move(125,10)
-        spike = Spike.Spike(200, 10)
+        Dave.rect = Dave.rect.move(125,450)
+        spike = Spike.Spike()
+        spike.rect.move(200,400)
         spikes.append(spike)
-        spike = Spike.Spike(210,10)
+        spike = Spike.Spike()
+        spike.rect.move(250, 10)
         spikes.append(spike)
-        spike = Spike.Spike(220,10)
-        spikes.append(spike)
-        spike = Spike.Spike(230,10)
-        spikes.append(spike)
-        alien = Alien.Alien(240,10,10)
-        enemies.append(alien)
-        return spikes, enemies, Dave
+        #spike = Spike.Spike()
+        #spikes.append(spike)
+        #spike = Spike.Spike()
+        #spikes.append(spike)
+        #alien = Alien.Alien()
+        #enemies.append(alien)
+        return spike, spikes, enemies, Dave
 
 def update(Lv1,enemies,spikes,Dave,SCREEN,Alien):
     SCREEN.blit(Lv1.image, Lv1.rect)
